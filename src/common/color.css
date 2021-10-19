@@ -3,7 +3,9 @@
 @value makerLightGrey: #e8e7e6;
 @value makerLightPink: #ffeae8;
 @value makerGrey: #626262;
-@value makerGreen: #385461;
+@value previewBg: #b4c1ff;
+@value editorBg: #7c8cdc;
+@value headerBg : rgba(72, 106, 179, 1);
 @value makerPink: pink;
 @value makerShadow: rgba(217, 217, 217, 1);
 @value makerWheat: wheat;

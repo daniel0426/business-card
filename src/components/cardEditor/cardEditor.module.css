@@ -1,0 +1,14 @@
+@value editorBg from '../../common/color.css';
+
+.maker {
+  flex-basis: 50%;
+  border-right: 3px solid white;
+  padding: 2em;
+  background-color: editorBg;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+}

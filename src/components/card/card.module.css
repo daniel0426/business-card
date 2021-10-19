@@ -1,0 +1,76 @@
+* {
+  list-style: none;
+}
+.card {
+  max-width: 30rem;
+  width: 50%;
+  margin: 1em auto;
+  padding: 1em 2em;
+  border: 2px solid lightgray;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+.card.bright {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  color: black;
+}
+
+.card.green {
+  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+  color: white;
+}
+
+.card.red {
+  background-color: #f9c1b1;
+  background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);
+  color: black;
+}
+.card.blue {
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  color: white;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar {
+  width: 10em;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.name {
+  align-self: center;
+}
+
+.subinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.position {
+  margin-bottom: 0.8em;
+  font-size: 0.9em;
+}
+.email,
+.ph {
+  margin: 0.2em 0;
+  font-size: 0.8em;
+}

@@ -1,0 +1,29 @@
+@value headerBg from '../../common/color.css';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 2em;
+  background-color: headerBg;
+  border-bottom: 3px solid white;
+}
+.title {
+  color: lightblue;
+  text-transform: uppercase;
+}
+
+.button {
+  padding: 0.5em 1em;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: #2a0845;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  transform: scale(1.05);
+  color: white;
+  background-color: #433f8a;
+}
