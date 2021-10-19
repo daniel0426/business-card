@@ -19,7 +19,7 @@ const Maker = ({ authService }) => {
       imgURL: "aijefjajeijfaf",
     },
     {
-        id: 1,
+        id: 2,
         name: "Ellie",
         company: "Samsung",
         theme: "light",
@@ -29,10 +29,10 @@ const Maker = ({ authService }) => {
         imgURL: null,
       },
       {
-        id: 1,
+        id: 3,
         name: "Ellie",
         company: "Samsung",
-        theme: "red",
+        theme: "light",
         position: "software Engineer",
         email: "ellie@gmail.conm",
         fileName: "ellie",
@@ -43,6 +43,11 @@ const Maker = ({ authService }) => {
   const onLogout = () => {
     authService.logout();
   };
+
+  const addCard = (card)=> {
+    const updated = [...cards, card];
+    setCards(updated);
+  }
 
   useEffect(() => {
     authService.onAuthChange((user) => {
@@ -56,7 +61,7 @@ const Maker = ({ authService }) => {
     <section className={styles.main}>
       <Header onLogout={onLogout} />
       <div className={styles.cardContainer}>
-        <CardEditor cards={cards}/>
+        <CardEditor cards={cards} addCard = {addCard} />
         <CardPreview cards={cards}/>
       </div>
       <Footer />

@@ -1,0 +1,39 @@
+.form {
+  width: 80%;
+  margin: 2em auto;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  border: 3px dotted #310f51;
+  border-radius: 1rem;
+}
+.form h1 {
+  color: lightskyblue;
+  font-size: 1.4em;
+}
+.inputContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.inputContainer .input {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: none;
+  margin: 0.3em;
+  font-size: 0.9em;
+}
+.choose {
+  display: flex;
+}
+.select {
+  padding: 0.3em 1em;
+  border-radius: 10px;
+  border: none;
+  margin: 0.3em;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.button {
+  justify-self: flex-end;
+}
