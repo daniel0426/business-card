@@ -2,7 +2,8 @@ import React from "react";
 import CardAddForm from "../cardAddForm/cardAddForm";
 import CardEditForm from "../cardEditForm/cardEditForm";
 import styles from "./cardEditor.module.css";
-const CardEditor = ({FileInput, cards, addAndUpdateCard, deleteCard }) => {
+
+const CardEditor = ({ FileInput, cards, addAndUpdateCard, deleteCard }) => {
   return (
     <section className={styles.maker}>
       <h1 className={styles.title}>Editor</h1>

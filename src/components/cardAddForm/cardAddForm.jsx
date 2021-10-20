@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import styles from './cardAddForm.module.css'
 import { useRef } from 'react/cjs/react.development';
 import Button from '../button/button';
 
-const CardAddForm = ({FileInput, addAndUpdateCard}) => {
+const CardAddForm = memo(({FileInput, addAndUpdateCard}) => {
     const formRef = useRef();
     const nameRef = useRef();
     const companyRef = useRef();
@@ -15,6 +15,7 @@ const CardAddForm = ({FileInput, addAndUpdateCard}) => {
         fileName: null,
         imgURL : null
     })
+
     const addCardHandler = (e)=> {
         e.preventDefault();
         const card = {
@@ -72,6 +73,6 @@ const CardAddForm = ({FileInput, addAndUpdateCard}) => {
             </div>
         </form>
     );
-}
+})
 
 export default CardAddForm;

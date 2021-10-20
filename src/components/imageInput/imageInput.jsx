@@ -1,11 +1,10 @@
-import { async } from "@firebase/util";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, memo } from "react";
 import styles from "./imageInput.module.css";
 
-const ImageInput = ({ imageUploader, name, onFileChange }) => {
+const ImageInput = memo(({ imageUploader, name, onFileChange }) => {
   const [loading, setLoading] = useState(false);
-  const inputRef = useRef();
 
+  const inputRef = useRef();
   const uploadHandler = (e) => {
     e.preventDefault();
     inputRef.current.click();
@@ -41,6 +40,6 @@ const ImageInput = ({ imageUploader, name, onFileChange }) => {
       {loading && <div className={styles.loadingSpinner}></div>}
     </div>
   );
-};
+});
 
 export default ImageInput;

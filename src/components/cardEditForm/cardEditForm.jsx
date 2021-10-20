@@ -1,9 +1,8 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import Button from "../button/button";
-import ImageInput from "../imageInput/imageInput";
 import styles from "./cardEditForm.module.css";
 
-const CardEditForm = ({ FileInput, card , addAndUpdateCard, deleteCard }) => {
+const CardEditForm = memo(({ FileInput, card , addAndUpdateCard, deleteCard }) => {
   const { name, company, theme, ph, position, email, fileName } = card;
   const nameRef = useRef();
   const companyRef = useRef();
@@ -98,9 +97,9 @@ const CardEditForm = ({ FileInput, card , addAndUpdateCard, deleteCard }) => {
         <div className={styles.button}>
           <Button name="Delete" onClick={()=> deleteCard(card)} />
         </div>
-      </div>
+      </div> 
     </form>
   );
-};
+});
 
 export default CardEditForm;
