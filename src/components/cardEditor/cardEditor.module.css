@@ -5,6 +5,7 @@
   border-right: 3px solid white;
   padding: 2em;
   background-color: editorBg;
+  overflow-y: auto;
 }
 
 .title {
