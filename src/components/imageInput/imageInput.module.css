@@ -1,0 +1,38 @@
+.input {
+  display: none;
+}
+.button {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: none;
+  margin: 0.3em;
+  font-size: 0.9em;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+.loadingSpinner {
+  margin: 0 1em;
+  padding: 0.5em;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  border: 2px solid lightgray;
+  border-top: 2px solid pink;
+  animation: spin 2s linear infinite;
+}
+.button.grey {
+  background-color: lightgray;
+}
+.button.pink {
+  background-color: orange;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

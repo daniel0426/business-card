@@ -3,7 +3,7 @@ import Button from "../button/button";
 import ImageInput from "../imageInput/imageInput";
 import styles from "./cardEditForm.module.css";
 
-const CardEditForm = ({ card , addAndUpdateCard, deleteCard }) => {
+const CardEditForm = ({ FileInput, card , addAndUpdateCard, deleteCard }) => {
   const { name, company, theme, ph, position, email, fileName } = card;
   const nameRef = useRef();
   const companyRef = useRef();
@@ -11,6 +11,14 @@ const CardEditForm = ({ card , addAndUpdateCard, deleteCard }) => {
   const emailRef = useRef();
   const phRef = useRef();
   const themeRef = useRef();
+
+  const onFileChange = (file)=> {
+    addAndUpdateCard({
+        ...card,
+        fileName: file.name,
+        imgURL : file.url
+    })
+  }
 
   const onChange = (e) => {
     if (e.currentTarget.name === null) {
@@ -85,7 +93,7 @@ const CardEditForm = ({ card , addAndUpdateCard, deleteCard }) => {
           <option value="blue">blue</option>
         </select>
         <div>
-         <ImageInput/>
+         <FileInput name={fileName} onFileChange={onFileChange}/>
         </div>
         <div className={styles.button}>
           <Button name="Delete" onClick={()=> deleteCard(card)} />

@@ -3,7 +3,6 @@ import {
     signInWithPopup, 
     GoogleAuthProvider,
     GithubAuthProvider,
-    signOut,
 } from "firebase/auth";
 
 
@@ -14,7 +13,6 @@ class AuthService{
         this.githubProvider = new GithubAuthProvider();
     }
 
-    
      login(providerName){
             const authProvider = this.getProvider(providerName)
             return  signInWithPopup(this.firebaseAuth, authProvider)

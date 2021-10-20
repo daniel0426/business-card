@@ -3,7 +3,7 @@ import styles from './cardAddForm.module.css'
 import { useRef } from 'react/cjs/react.development';
 import Button from '../button/button';
 
-const CardAddForm = ({addAndUpdateCard}) => {
+const CardAddForm = ({FileInput, addAndUpdateCard}) => {
     const formRef = useRef();
     const nameRef = useRef();
     const companyRef = useRef();
@@ -29,9 +29,21 @@ const CardAddForm = ({addAndUpdateCard}) => {
             imgURL : file.imgURL || ''
         };
         formRef.current.reset();
+        setFile({
+            fileName: null,
+            imgURL : null
+        })
         addAndUpdateCard(card);
         
     }
+
+    const onFileChange = (file)=> {
+        setFile({
+            fileName: file.name,
+            imgURL : file.url,
+        })
+    }
+  
     return (
         <form ref={formRef} className={styles.form}>
             <h1> ADD </h1>
@@ -52,7 +64,7 @@ const CardAddForm = ({addAndUpdateCard}) => {
                     <option value="blue">blue</option>
                 </select>
                 <div>
-                    {/* <FileInput name={file.fileName} onFileChange={onFileChange}/> */}
+                <FileInput name={file.fileName} onFileChange = {onFileChange}/>
                 </div>
                 <div className={styles.button}>
                 <Button name="Add" onClick={addCardHandler}/>
