@@ -8,15 +8,17 @@ const Card = memo(({card}) => {
     return (
         <li className={`${styles.card} ${getTheme(theme)}`}>
             <div className={styles.profile} >
-                <img className={styles.avatar} src={img} alt="profile" />
+                <div className={styles.imgContainer}>
+                    <img className={styles.avatar} src={img} alt="profile" />
+                </div>
                 <h4 className={styles.company}>{company}</h4>
             </div>
             <div className={styles.info}>
                 <h1 className={styles.name}>{name}</h1>
                 <div className={styles.subinfo}>
-                <p className={styles.position}>{position}</p>
-                <p className={styles.email}> {email}</p>
-                <p className={styles.ph}>{ph}</p>
+                    <p className={styles.position}>{position}</p>
+                    <p className={styles.email}> {email}</p>
+                    <p className={styles.ph}>{ph}</p>
                 </div>
             </div>
         </li>

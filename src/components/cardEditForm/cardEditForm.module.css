@@ -20,8 +20,12 @@
 
 .choose {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .select {
+  flex: 1;
   padding: 0.3em 1em;
   border-radius: 10px;
   border: none;
@@ -29,6 +33,9 @@
   font-size: 0.9em;
   cursor: pointer;
 }
+.upload {
+}
 .button {
   justify-self: flex-end;
+  margin: 0.3em;
 }

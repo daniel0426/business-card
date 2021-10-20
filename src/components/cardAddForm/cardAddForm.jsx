@@ -49,11 +49,14 @@ const CardAddForm = memo(({FileInput, addAndUpdateCard}) => {
         <form ref={formRef} className={styles.form}>
             <h1> ADD </h1>
             <div className={styles.inputContainer}>
-                <input ref={nameRef} className={styles.input} type="text" name="name" placeholder="Name"/>
-                <input ref={companyRef} className={styles.input} type="text" name="company" placeholder="Company"/>
-                <input ref={positionRef} className={styles.input} type="text" name="position" placeholder="Position" />
-                <input ref={emailRef} className={styles.input} type="text" name="email" placeholder="Email" />
-                <input ref={phRef} className={styles.input} type="text" name="ph" placeholder="phone"/>
+                <input ref={nameRef} className={styles.input} type="text" name="name" maxlength="15" placeholder="Name"/>
+                <input ref={companyRef} className={styles.input} type="text" name="company"   maxlength="15" placeholder="Company"/>
+                <input ref={positionRef} className={styles.input} type="text" name="position" maxlength="20" placeholder="Position" />
+                
+            </div>
+            <div className={styles.inputContainer}>
+                <input ref={emailRef} className={styles.input} type="text"  maxlength='20' name="email" placeholder="Email" />
+                <input ref={phRef} className={styles.input} type="text"  maxlength='15' name="ph" placeholder="phone"/>
             </div>
 
             <div className={styles.choose}>
@@ -64,11 +67,11 @@ const CardAddForm = memo(({FileInput, addAndUpdateCard}) => {
                     <option value="red">red</option>
                     <option value="blue">blue</option>
                 </select>
-                <div>
-                <FileInput name={file.fileName} onFileChange = {onFileChange}/>
+                <div className={styles.uploadBtn}>
+                    <FileInput name={file.fileName} onFileChange = {onFileChange}/>
                 </div>
                 <div className={styles.button}>
-                <Button name="Add" onClick={addCardHandler}/>
+                    <Button name="Add" onClick={addCardHandler}/>
                 </div>
             </div>
         </form>

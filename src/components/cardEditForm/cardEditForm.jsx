@@ -39,6 +39,7 @@ const CardEditForm = memo(({ FileInput, card , addAndUpdateCard, deleteCard }) =
           className={styles.input}
           type="text"
           name="name"
+          maxlength="15"
           value={name}
           onChange={onChange}
         />
@@ -47,6 +48,7 @@ const CardEditForm = memo(({ FileInput, card , addAndUpdateCard, deleteCard }) =
           className={styles.input}
           type="text"
           name="company"
+          maxlength="15"
           value={company}
           onChange={onChange}
         />
@@ -55,14 +57,18 @@ const CardEditForm = memo(({ FileInput, card , addAndUpdateCard, deleteCard }) =
           className={styles.input}
           type="text"
           name="position"
+          maxlength="20"
           value={position}
           onChange={onChange}
         />
+        </div>
+        <div className={styles.inputContainer}> 
         <input
           ref={emailRef}
           className={styles.input}
           type="text"
           name="email"
+          maxlength='20'
           value={email}
           onChange={onChange}
         />
@@ -71,9 +77,12 @@ const CardEditForm = memo(({ FileInput, card , addAndUpdateCard, deleteCard }) =
           className={styles.input}
           type="text"
           name="ph"
+          
+          maxlength='15'
           value={ph}
           onChange={onChange}
         />
+        
       </div>
       <div className={styles.choose}>
         <select
@@ -83,7 +92,7 @@ const CardEditForm = memo(({ FileInput, card , addAndUpdateCard, deleteCard }) =
           value={theme}
           onChange={onChange}
         >
-          <option defaultValue disabled value="Choose theme">
+          <option selected="selected" disabled value="Choose theme">
             choose theme
           </option>
           <option value="bright">bright</option>
@@ -91,8 +100,8 @@ const CardEditForm = memo(({ FileInput, card , addAndUpdateCard, deleteCard }) =
           <option value="red">red</option>
           <option value="blue">blue</option>
         </select>
-        <div>
-         <FileInput name={fileName} onFileChange={onFileChange}/>
+        <div className={styles.upload}>
+            <FileInput name={fileName} onFileChange={onFileChange}/>
         </div>
         <div className={styles.button}>
           <Button name="Delete" onClick={()=> deleteCard(card)} />

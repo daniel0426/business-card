@@ -8,8 +8,10 @@
   border-radius: 1rem;
 }
 .form h1 {
-  color: lightskyblue;
-  font-size: 1.4em;
+  color: #fcfcd4;
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 1em;
 }
 .inputContainer {
   display: grid;
@@ -24,16 +26,21 @@
 }
 .choose {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .select {
-  padding: 0.3em 1em;
+  padding: 0 1em;
   border-radius: 10px;
   border: none;
   margin: 0.3em;
   font-size: 0.9em;
   cursor: pointer;
+  height: 2em;
+  flex: 1;
 }
 
 .button {
   justify-self: flex-end;
+  margin: 0.3em;
 }

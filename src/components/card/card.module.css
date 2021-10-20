@@ -2,15 +2,16 @@
   list-style: none;
 }
 .card {
-  max-width: 30rem;
-  width: 50%;
+  width: 60%;
+  min-width: 15rem;
   margin: 1em auto;
-  padding: 1em 2em;
+  padding: 1em 1em;
   border: 2px solid lightgray;
   border-radius: 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  cursor: pointer;
 }
 .card.bright {
   background-color: #ffffff;
@@ -44,10 +45,19 @@
   flex-direction: column;
   align-items: center;
 }
+.imgContainer {
+  position: relative;
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
 .avatar {
-  width: 10em;
   margin-bottom: 0.5em;
-  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .info {
   display: flex;
@@ -58,6 +68,7 @@
 
 .name {
   align-self: center;
+  text-align: center;
 }
 
 .subinfo {
@@ -73,4 +84,14 @@
 .ph {
   margin: 0.2em 0;
   font-size: 0.8em;
+}
+
+@media screen and (max-width: 30rem) {
+  .imgContainer {
+    width: 6em;
+    height: 6em;
+  }
+  .company {
+    font-size: 0.8em;
+  }
 }
