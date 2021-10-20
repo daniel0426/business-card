@@ -7,18 +7,18 @@ import Header from "../mainHeader/header";
 import styles from "./maker.module.css";
 
 const Maker = ({ authService }) => {
-  const [cards, setCards] = useState([
-    {
-      id: 1,
-      name: "Ellie",
-      company: "Samsung",
-      theme: "light",
-      position: "software Engineer",
-      email: "ellie@gmail.conm",
-      fileName: "ellie",
-      imgURL: "aijefjajeijfaf",
-    },
-    {
+  const [cards, setCards] = useState({
+      '1': {
+        id: 1,
+        name: "Ellie",
+        company: "Samsung",
+        theme: "light",
+        position: "software Engineer",
+        email: "ellie@gmail.conm",
+        fileName: "ellie",
+        imgURL: "aijefjajeijfaf",
+      },
+      '2': {
         id: 2,
         name: "Ellie",
         company: "Samsung",
@@ -28,7 +28,7 @@ const Maker = ({ authService }) => {
         fileName: "ellie",
         imgURL: null,
       },
-      {
+      '3' :  {
         id: 3,
         name: "Ellie",
         company: "Samsung",
@@ -37,16 +37,32 @@ const Maker = ({ authService }) => {
         email: "ellie@gmail.conm",
         fileName: "ellie",
         imgURL: null,
-      },
-  ]);
+      }
+
+  });
+  
+  
+   
   const history = useHistory();
+
   const onLogout = () => {
     authService.logout();
   };
+  
+  const addAndUpdateCard = (card)=> {
+    setCards(prevCards => {
+        const updated = {...prevCards};
+        updated[card.id] = card;
+        return updated;
+    });
+  }
 
-  const addCard = (card)=> {
-    const updated = [...cards, card];
-    setCards(updated);
+  const deleteCard = card => {
+    setCards(prevCards => {
+        const updated = {...prevCards};
+        delete updated[card.id];
+        return updated;
+    });
   }
 
   useEffect(() => {
@@ -61,7 +77,7 @@ const Maker = ({ authService }) => {
     <section className={styles.main}>
       <Header onLogout={onLogout} />
       <div className={styles.cardContainer}>
-        <CardEditor cards={cards} addCard = {addCard} />
+        <CardEditor cards={cards} addAndUpdateCard={addAndUpdateCard} deleteCard={deleteCard} />
         <CardPreview cards={cards}/>
       </div>
       <Footer />

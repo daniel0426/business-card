@@ -3,7 +3,7 @@ import Button from "../button/button";
 import ImageInput from "../imageInput/imageInput";
 import styles from "./cardEditForm.module.css";
 
-const CardEditForm = ({ card }) => {
+const CardEditForm = ({ card , addAndUpdateCard, deleteCard }) => {
   const { name, company, theme, ph, position, email, fileName } = card;
   const nameRef = useRef();
   const companyRef = useRef();
@@ -17,7 +17,13 @@ const CardEditForm = ({ card }) => {
       return;
     }
     e.preventDefault();
+    addAndUpdateCard({
+        ...card,
+        [e.currentTarget.name]: e.currentTarget.value,
+    })
   };
+
+  
   return (
     <form className={styles.form}>
       <div className={styles.inputContainer}>
@@ -82,7 +88,7 @@ const CardEditForm = ({ card }) => {
          <ImageInput/>
         </div>
         <div className={styles.button}>
-          <Button name="Delete"  />
+          <Button name="Delete" onClick={()=> deleteCard(card)} />
         </div>
       </div>
     </form>

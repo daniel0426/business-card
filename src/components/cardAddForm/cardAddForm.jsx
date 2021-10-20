@@ -3,7 +3,7 @@ import styles from './cardAddForm.module.css'
 import { useRef } from 'react/cjs/react.development';
 import Button from '../button/button';
 
-const CardAddForm = ({addCard}) => {
+const CardAddForm = ({addAndUpdateCard}) => {
     const formRef = useRef();
     const nameRef = useRef();
     const companyRef = useRef();
@@ -29,7 +29,7 @@ const CardAddForm = ({addCard}) => {
             imgURL : file.imgURL || ''
         };
         formRef.current.reset();
-        addCard(card);
+        addAndUpdateCard(card);
         
     }
     return (
