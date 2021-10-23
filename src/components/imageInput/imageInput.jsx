@@ -20,7 +20,6 @@ const ImageInput = memo(({ imageUploader, name, onFileChange }) => {
     });
   };
 
-
   return (
     <div className={styles.container}>
       <input
