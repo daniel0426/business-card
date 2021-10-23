@@ -10,8 +10,8 @@ Demo Link ==>
 
 1. [Purpose of this project](#1-Purpose-of-this-project)
 2. [Tech Stack](#2-Tech-Stack)
-3. [This to know](#3--Things to know)
-4. [Things to Improvement](#4--Things-to-Improvement)
+3. [This to know](#3-Things-to-know)
+4. [Things to Improvement](#4-Things-to-Improvement)
 
 
 ## 1. Purpose of this project
