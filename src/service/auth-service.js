@@ -33,7 +33,7 @@ class AuthService{
             case 'Sign in with Github' :
                 return this.githubProvider;
             default : 
-            throw new Error(`not supported provider : ${providerName} `)
+            console.log(`not supported provider : ${providerName} `)
         }
     }
 }
