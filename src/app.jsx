@@ -1,10 +1,11 @@
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter,Switch, Route } from 'react-router-dom';
 import styles from './app.module.css';
 import Login from './components/login/login';
 import Maker from './components/maker/maker';
 
 function App({FileInput, authService, cardRepository}) {
   return (
+    <BrowserRouter>
     <div className={styles.app}>
       <Switch>
         <Route exact path='/'>
@@ -15,6 +16,7 @@ function App({FileInput, authService, cardRepository}) {
         </Route>
       </Switch>
     </div>
+    </BrowserRouter>
   )
 }
 
