@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Business Card Maker 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Responsive wep application that store business card 
+<br>
+Demo Link ==> 
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## 🔗 Index
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [Purpose of this project](#1-Purpose-of-this-project)
+2. [Tech Stack](#2-Tech-Stack)
+3. [This to know](#3-Things-to-know)
+4. [Things to Improvement](#4-Things-to-Improvement)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## 1. Purpose of this project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Make application that is actually useful.
+- Make application from scratch using the technology I have.
+- Connection with people is getting hard in this pandemic => To preserve network, remember important relationship with storing business card.
 
-### `yarn build`
+## 2. Tech Stack 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<span id="use-tech">
+  <img src="https://img.shields.io/badge/Javascript-orange?style=flat-square&logo=JavaScript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/css-blue?style=flat-square&logo=CSS3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/HTML-red?style=flat-square&logo=HTML5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-blue?style=flat-square&logo=React&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ReactRouter-critical?style=flat-square&logo=React&logoColor=white"/>
+  <img src="https://img.shields.io/badge/firebase-yellow?style=flat-square&logo=firebase&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Cloudinary-orange?style=flat-square&logoColor=white"/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</span>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 3. Things to know 
 
-### `yarn eject`
+  - Using Cloudinary to store images.
+  - Firebase realtime database and authentication 
+  - Sync with database using firebase realtime database 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 4. Things to Improvement 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Store business card in a different page would be good.
+  - Make button to add business card would be more user friendly.
+  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
